@@ -144,7 +144,7 @@ function SetupForPool(logger, poolOptions, setupFinished){
             } catch(e){
                 throw e;
             }
-        }, processingConfig.paymentInterval * 1000);
+        }, processingConfig.paymentInterval * 1000 * 60);
         setTimeout(processPayments, 100);
         setupFinished(true);
     }
