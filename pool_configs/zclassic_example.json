@@ -12,14 +12,16 @@
     "_comment_tAddress": "transparent address used to send payments, make this a different address, otherwise payments will not send",
 
     "walletInterval": 10,
-
+    "_comment_walletInterval": "This is for transfering coins from the coinbase address, to the zAddress, and then to the tAddress. Zcash's code requires this so you can't track where coins came from"
+    
     "rewardRecipients": {
     },
 
     "paymentProcessing": {
         "enabled": true,
         "paymentInterval": 20,
-        "minimumPayment": 70,
+        "minimumPayment": 30,
+        "_comment_paymentInterval": "It would be a good idea to keep this 10-20 minutes after the walletInterval to prevent the paymentInterval from spending unconfirmed coins",
         "daemon": {
             "host": "127.0.0.1",
             "port": 19332,
